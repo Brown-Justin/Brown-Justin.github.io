@@ -35,3 +35,23 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+
+# Setting up my enviroment 
+Notes: setting up my R enviroment by loading the 'tidyverse' and 'palmer penguins' packages
+
+```{r loading packages}
+library("ggplot2")
+library('palmerpenguins')
+```
+
+## Visualizations
+Here we will go through a series of visualizations
+
+### Flipper and Body mass in purple
+Here, we plot flipper length against body mass
+
+```{r visualize flipper andd body mass in purple}
+ggplot(data=penguins,aes(x=flipper_length_mm,y=body_mass_g))+
+  geom_point(color="purple")
+```
